@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/v1/hello");
+        const response = await fetch("/api/v1/hello");
         const data = await response.json();
         setMessage(data.message);
       } catch (error) {

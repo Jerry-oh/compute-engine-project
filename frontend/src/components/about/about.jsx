@@ -17,7 +17,7 @@ const About = () => {
   useEffect(() => {
     const fetchUsers = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/v1/users");
+        const response = await fetch("/api/v1/users");
         const result = await response.json();
         setUsers(result.data);
       } catch (error) {
