@@ -1,4 +1,4 @@
-@import '../../style/App.scss';
+@import "../../style/App.scss";
 
 .team__box {
   max-width: 370px;
@@ -6,10 +6,12 @@
   margin: 0 auto;
   margin-top: 60px;
   position: relative;
-  
+
   img {
+    float: left;
     width: 100%;
     height: 100%;
+    background-size: cover;
   }
 
   .team__box-info {
@@ -25,7 +27,10 @@
       color: $black-color;
     }
     p:nth-child(2) {
-      color: $white-color;
+      color: $black-color;
+    }
+    p:nth-child(3) {
+      color: $black-color;
     }
   }
 }

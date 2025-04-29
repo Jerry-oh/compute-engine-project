@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 import "./navbar.scss";
 // Assets
 import CloseIcons from "../../assets/navbar/mobile-close.svg";
-import Logo from "../../assets/navbar/logo-yellow.svg";
+import LogoAwan from "../../assets/navbar/logo-awan.png";
 
 const mobileNav = (props) => (
   <div className={`mobile__navbar ${props.isOpen ? "mobile__open" : ""}`}>
@@ -20,7 +20,12 @@ const mobileNav = (props) => (
         duration={500}
         onClick={props.closeMobileMenu}
       >
-        <img src={Logo} alt="logo" />
+        <img
+          src={LogoAwan}
+          alt="logo"
+          className="pointer"
+          style={{ width: "100px", height: "auto" }} // adjust width as needed
+        />
       </Link>
     </div>
     <div className="mobile__navbar-menu">

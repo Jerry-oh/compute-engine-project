@@ -3,7 +3,7 @@ import { Row, Col } from "react-flexbox-grid";
 // SCSS
 import "./hero.scss";
 //Assets
-import HeroImage from "../../assets/hero/hero-image.png";
+import HeroImage from "../../assets/hero/Google-Compute-Engine.png";
 //Components
 import Button from "../ui-components/button/button";
 
@@ -13,7 +13,7 @@ const Hero = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await fetch("/api/v1/hello");
+        const response = await fetch("http://localhost:3000/api/v1/hello");
         const data = await response.json();
         setMessage(data.message);
       } catch (error) {
@@ -32,12 +32,10 @@ const Hero = () => {
           <Col md={12} lg={6}>
             <div className="hero-info">
               <h1 className="weight800 font60">{message}</h1>
-              <h1 className="weight800 font60">
-                We Are Creative Digital Agency.
-              </h1>
               <p className="font12">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua
+                Project tugas komputasi awan menggunakan Compute Engine, Dibuat
+                oleh tim Cloud-Project dari kelas IF-A Sore dengan Dosen Ericky
+                Benna Perolihin Manurung, S.Kom., M.Kom.
               </p>
               <Button label="SEND MESSAGE" target={"contact"} />
             </div>
